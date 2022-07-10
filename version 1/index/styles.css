@@ -1,0 +1,297 @@
+:root{
+    --verde: #8386cc;
+    --verde-claro: #e4c42c;
+    --blanco: #000;
+}
+*{
+    margin: 0 ;
+    padding: 0 ;
+    box-sizing: border-box;
+}
+header{
+    display: flexbox;
+    position: relative;
+    width: 100%;
+    height: 100px;
+    margin-top: 32px;
+    align-items: center;
+    justify-content: center;
+}
+.container_left-header{
+    position: relative;
+    width: 88%;
+    height: 100%;
+    background-color: var(--verde);
+    border: solid 4px ;
+    border-color: var(--blanco);
+    border-left:none;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.container_logo-div{
+    position: relative;
+    display: flex ;
+    width: min-content;
+    height: 100%;
+    margin-left: 64px;
+    align-items: center;
+    justify-content: center;
+    animation: all 1s;
+    /*background-color: aliceblue;*/
+}
+.container_logo-div :hover{
+    cursor: pointer;
+    opacity: .9; 
+    font-size: 55px;
+}
+.logo_a{
+    text-decoration: none;
+    font-family: 'Fascinate';
+    font-size: 54px;
+    color: var(--blanco);
+}
+.container_nav-div{
+    display:flex;
+    position: absolute;
+    left: 450px;
+    top: 0;
+    right: 0;
+    width:70%;
+    height: 100%;
+    /*background-color:rgba(192, 82, 181, 0.598);*/
+}
+nav{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    justify-content: center;
+    align-content: center;
+}
+nav ul{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+nav ul li{
+    display: flex;
+    position: relative;
+    width: min-content;
+}
+nav ul li a{
+    text-decoration: none;
+    font-family: Roboto Condensed;
+    font-size: 32px;
+    color: var(--blanco);
+}
+nav ul li a:hover{
+    color: var(--blanco);
+    opacity: .8;
+}
+.container_shop-box{
+    display: flex;
+    position: absolute;
+    background-color: var(--verde);
+    width: 7%;
+    margin-right: 2.5%;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border: solid 4px;
+    border-radius: 30px;
+    border-color: var(--blanco);
+}
+.container_shop-box-1-div{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.container_shop-box-2-div{
+    display: flex;
+    position: relative;
+    width: 60%;
+    height: 70%;
+    align-items: center;
+    justify-content: center;
+}
+.material-symbols-outlined{
+    font-size: 32px;
+    color: var(--blanco);
+}
+article{
+    box-lines: border-box;
+    display: flex;
+    position: relative;;
+    margin: 32px 0 0 0;
+    width: 100%;
+    height: 75vh;
+}
+.container_right{
+    display: flex;
+    position: relative;
+    width: 30%;
+    height: 100%;
+    margin: 0 0 0 32px;
+    background-color: var(--verde);
+    border: solid 4px;
+    border-radius: 30px;
+    border-color: var(--blanco);
+}
+.aside_right{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+.container_tittle-div{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.container_tittle-div{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 330px;
+    margin: 64px 0 32px 0 ;
+    justify-content: center;
+    align-items: center;
+    /*background-color: var(--verde-claro);*/
+}
+.container_tittle-div h1 span{
+    display: block;
+    color: var(--blanco);
+    font-size: 92px;
+    font-family: 'Fascinate', cursive,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container_p-div{
+    display: flex;
+    position: relative;
+    margin: 0px 64px 0 64px ;
+    width: 500px;
+    height: 150px;
+    text-align: justify;
+    text-indent: 2px;
+    /*background-color: var(--verde-claro);*/
+}
+.container_p-div p{
+    display: block;
+    color: var(--blanco) ;
+    font-size: 32px;
+    font-family: roboto condensed,Arial, Helvetica, sans-serif;
+}
+.container_button-div{
+    display: flex;
+    position: relative;
+    width: 33%;
+    height: 15%;
+    background-color: var(--verde-claro);
+    left: 364px;
+    margin: 32px 0px 0px 0px;
+    align-items: center;
+    justify-content: center;
+    border: solid 4px;
+    border-radius: 30px;
+    border-color: var(--blanco);
+}
+.container_button-div a{
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 32px;
+    font-family: fascinate,cursive, roboto condensed,Arial, Helvetica, sans-serif;
+}
+.container_button-div :hover{
+    opacity: .8;
+    font-size: 30px;
+}
+.container_harina-img{
+    position: absolute;
+    top: 610px;
+    left: -80px;
+    width: 390px;
+    height: 200px;    
+}
+.harina_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*
+container right
+*/
+.container_left-div{
+    display: flex;
+    position: relative;
+    width: 63%;
+    height: 100%;
+    background-color: var(--verde);
+    margin: 0 0 0 64px;
+    border: solid 4px;
+    border-color: --blanco;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.container_left-2-div{
+    display: flex;
+    position: relative;
+    width: 94%;
+    height: 91%;
+    align-items: center;
+    background-color: var(--verde-claro);
+    border-radius: 30px;
+}
+.container_left-section{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.img1_container-left{
+    display: flex;
+    position:absolute;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    height: 620px;
+    bottom: 0;
+    right: 32px;
+    z-index: 0;
+}
+.img2_container-left{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height:240px;
+    top: 490px;
+    right: 0;
+}
+
+.img_girl{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.img_brownies{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.img_cupcakes{
+    position: absolute;
+    width: 740px;
+    right: 700px;
+    right: 620px;
+    /*background-color: #bbbb;*/
+}
+
