@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vw;
+  overflow-x: none;
+}
+body header {
+  margin-top: 4%;
+  width: 100vw;
+  height: 9%;
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+  grid-template-rows: 100%;
+  position: fixed;
+  align-items: center;
+}
+
+.container-shopbox {
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #FFDB2F;
+  border-left: none;
+  border-radius: 0 0.6em 0.6em 0;
+  align-items: center;
+  justify-content: center;
+}
+.container-shopbox i {
+  font-size: 0.875rem;
+  color: #8386CC;
+}
+
+.container_logo {
+  z-index: 1;
+  background-color: #8386CC;
+  border-radius: 0.6em;
+  justify-self: center;
+  height: 100%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container_logo .logo_a-link {
+  text-decoration: none;
+  width: max-content;
+}
+.container_logo .logo_a-link .logo {
+  letter-spacing: 0.3125rem;
+  color: white;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1.6rem;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: 75rem;
+  overflow: hidden;
+  border: 3px solid #FFDB2F;
+  border-right: none;
+  border-radius: 0.6em 0 0 0.6em;
+}
+
+.nav {
+  --state-hamburger: scale(1);
+  --state-close: scale(0);
+  --state-menu: translate(100%);
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 100%;
+  width: 100%;
+}
+.nav:target {
+  --state-hamburger: scale(0);
+  --state-close: scale(1);
+  --state-menu: translate(0);
+}
+.nav .hamburger {
+  border: 3px solid #FFDB2F;
+  border-radius: 0.6em 0 0 0.6em;
+  border-right: none;
+  cursor: pointer;
+  grid-column: 1/span 2;
+  grid-row: 1/span 2;
+  transform: var(--state-hamburger);
+  transition: 0.3s transform;
+}
+.nav .hamburger .fa-solid.fa-bars {
+  color: #8386CC;
+  font-size: 1.2rem;
+  transform: translatex(100%) translatey(70%);
+}
+.nav .close {
+  cursor: pointer;
+  grid-column: 1/span 2;
+  grid-row: 1/span 2;
+  transform: var(--state-close);
+  transition: 0.3s transform;
+}
+.nav .close .fa-solid.fa-xmark {
+  padding-left: 2px;
+  color: #8386CC;
+  font-size: 1.3rem;
+  transform: translatex(130%) translatey(90%);
+}
+.nav .nav_menu {
+  list-style: none;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+  display: grid;
+  align-items: center;
+  gap: 30px;
+  padding-left: 20%;
+  padding-top: 30%;
+}
+.nav .nav_menu .nav_menu-item {
+  height: 3.875rem;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.7rem;
+  border: 3px solid #FFDB2F;
+  border-right: none;
+  border-radius: 0.6em 0 0 0.6em;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  transform: var(--state-menu);
+  transition: 0.3s transform;
+}
+.nav .nav_menu .nav_menu-item .nav-link {
+  letter-spacing: 0.125rem;
+  text-decoration: none;
+  color: #8386CC;
+}
+.nav .nav_menu .nav_menu-item .home {
+  color: rgb(50, 42, 95);
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    margin-top: 4%;
+    width: 100vw;
+    height: 9%;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 100%;
+    position: fixed;
+    align-items: center;
+  }
+  .container-shopbox {
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #FFDB2F;
+    border-left: none;
+    border-radius: 0 0.6em 0.6em 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .container-shopbox i {
+    font-size: 0.875rem;
+    color: #8386CC;
+  }
+  .container_logo {
+    z-index: 1;
+    background-color: #8386CC;
+    border-radius: 0.6em;
+    justify-self: center;
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container_logo .logo_a-link {
+    text-decoration: none;
+    width: max-content;
+  }
+  .container_logo .logo_a-link .logo {
+    letter-spacing: 0.3125rem;
+    color: white;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 1.6rem;
+  }
+  .nav {
+    --state-hamburger: scale(0);
+    --state-close: scale(0);
+    --state-menu: translate(0);
+  }
+  .nav:target {
+    --state-close: scale(0);
+  }
+  .nav .hamburger {
+    border: 3px solid #FFDB2F;
+    border-radius: 0.6em 0 0 0.6em;
+    border-right: none;
+    cursor: pointer;
+    grid-column: 1/span 2;
+    grid-row: 1/span 2;
+    transform: var(--state-hamburger);
+    transition: 0.3s transform;
+  }
+  .nav .hamburger .fa-solid.fa-bars {
+    color: #8386CC;
+    font-size: 1.2rem;
+    transform: translatex(100%) translatey(70%);
+  }
+  .nav .close {
+    cursor: pointer;
+    grid-column: 1/span 2;
+    grid-row: 1/span 2;
+    transform: var(--state-close);
+    transition: 0.3s transform;
+  }
+  .nav .close .fa-solid.fa-xmark {
+    padding-left: 2px;
+    color: #8386CC;
+    font-size: 1.3rem;
+    transform: translatex(130%) translatey(90%);
+  }
+  .nav .nav_menu {
+    list-style: none;
+    background-color: unset;
+    position: unset;
+    gap: 1.5rem;
+  }
+  .nav .nav_menu .nav_menu-item {
+    height: 3.875rem;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    font-size: 1.7rem;
+    border: 3px solid #FFDB2F;
+    border-right: none;
+    border-radius: 0.6em 0 0 0.6em;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+  }
+  .nav .nav_menu .nav_menu-item .nav-link {
+    letter-spacing: 0.125rem;
+    text-decoration: none;
+    color: #8386CC;
+  }
+  .nav .nav_menu .nav_menu-item .home {
+    color: rgb(50, 42, 95);
+  }
+}
+/*.nav {
+    display: flex;
+    justify-content: space-around;
+    width: 15%;
+    background-color: $secundary-color;
+    border-radius: 1rem 0 0 1rem;
+    .nav-link{
+        color: $primary-color;
+        text-decoration: none;
+    }  
+    .nav_menu {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        list-style: none;
+        .nav_menu-item {
+            font-family: $dmsans;
+            font-size: 1.2rem;
+            line-height: 4.0625rem;
+            font-weight: 700;
+            width: max-content;
+        .nav_menu-link {
+            color: $primary-color;
+            transition-property:color;
+            transition-duration: 0.3s;
+            &:hover {color: rgb(97, 58, 97);}
+        }
+    }
+    }
+}*/
+
+/*# sourceMappingURL=index.css.map */
